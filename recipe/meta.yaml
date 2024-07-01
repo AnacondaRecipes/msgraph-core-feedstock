@@ -25,7 +25,7 @@ requirements:
     - microsoft-kiota-abstractions >=1.0.0,<2.0.0
     - microsoft-kiota-authentication-azure >=1.0.0,<2.0.0
     - microsoft-kiota-http >=1.0.0,<2.0.0
-    - httpx >=0.23.0
+#    - httpx >=0.23.0
 
 test:
   imports:
