@@ -29,7 +29,7 @@ requirements:
 
 test:
   imports:
-    - msgraph_core
+    - msgraph-core
   commands:
     - pip check
   requires:
