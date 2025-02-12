@@ -1,13 +1,13 @@
 {% set name = "msgraph-core" %}
-{% set version = "1.0.0" %}
+{% set version = "1.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/msgraph-core-{{ version }}.tar.gz
-  sha256: f26bcbbb3cd149dd7f1613159e0c2ed862888d61bfd20ef0b08b9408eb670c9d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/msgraph_core-{{ version }}.tar.gz
+  sha256: 91c721b4c741d0e9a536e3c43e1cbd2254928b4d207e4f994e9cc7cb7a25bd74
 
 build:
   noarch: python
@@ -16,16 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=65.5.0
+    - python
+    - setuptools
     - wheel
     - pip
   run:
-    - python >=3.8
-    - microsoft-kiota-abstractions >=1.0.0,<2.0.0
-    - microsoft-kiota-authentication-azure >=1.0.0,<2.0.0
-    - microsoft-kiota-http >=1.0.0,<2.0.0
-    - httpx >=0.23.0
+    - python
+    - microsoft-kiota-abstractions
+    - microsoft-kiota-authentication-azure
+    - microsoft-kiota-http
+    - httpx
 
 test:
   imports:
@@ -34,12 +34,9 @@ test:
     - pip check
   requires:
     - pip
+    - python
 
 about:
-  summary: Core component of the Microsoft Graph Python SDK
-  license: MIT
-  license_file: LICENSE
-
   home: https://github.com/microsoftgraph/msgraph-sdk-python-core
   summary: Core abstractions for kiota generated libraries in Python
   license: MIT
@@ -49,5 +46,10 @@ about:
   doc_url: https://github.com/microsoftgraph/msgraph-sdk-python-core/blob/main/README.md
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/64252
+    reason: Dependency for msgraph-sdk
+  recipe-maintainers:
+    - ianaobi
   recipe-maintainers:
     - xylar
