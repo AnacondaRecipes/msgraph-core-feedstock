@@ -20,12 +20,14 @@ requirements:
     - setuptools
     - wheel
     - pip
+    - h2
   run:
     - python
     - microsoft-kiota-abstractions
     - microsoft-kiota-authentication-azure
     - microsoft-kiota-http
     - httpx
+    - h2
 
 test:
   imports:
