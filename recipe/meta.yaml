@@ -52,6 +52,5 @@ extra:
     reason: Dependency for msgraph-sdk
   recipe-maintainers:
     - ianaobi
-    - bkreider
   recipe-maintainers:
     - xylar
